@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Samsung Galaxy Phones by Price Segment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f7f9fa; margin: 0; padding: 0; }
+        .container { max-width: 1200px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); padding: 32px 18px 24px 18px; }
+        h1 { color: #1a73e8; text-align: center; margin-bottom: 32px; }
+        .tabs { display: flex; border-bottom: 2px solid #e0e0e0; margin-bottom: 24px; flex-wrap: wrap; }
+        .tab { padding: 12px 24px; cursor: pointer; color: #555; border: none; background: none; font-size: 1.1em; transition: color 0.2s; }
+        .tab.active { color: #1a73e8; border-bottom: 3px solid #1a73e8; font-weight: bold; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        table.dataTable { width: 100% !important; margin-bottom: 24px; }
+        th, td { white-space: pre-line; }
+        @media (max-width: 600px) {
+            .container { padding: 8px 0; }
+            .tabs { flex-direction: column; }
+            .tab { width: 100%; text-align: left; }
+            table, thead, tbody, th, td, tr { font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Samsung Galaxy Phones by Price Segment</h1>
+    <div class="tabs">
+        <button class="tab active" data-tab="tab1">₹5,000–₹10,000</button>
+        <button class="tab" data-tab="tab2">₹10,000–₹15,000</button>
+        <button class="tab" data-tab="tab3">₹15,000–₹20,000</button>
+        <button class="tab" data-tab="tab4">₹20,000–₹25,000</button>
+        <button class="tab" data-tab="tab5">₹25,000–₹30,000</button>
+    </div>
+    <!-- ₹5,000–₹10,000 -->
+    <div id="tab1" class="tab-content active">
+        <table id="table1" class="display">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Display</th>
+                    <th>Processor</th>
+                    <th>RAM / Storage</th>
+                    <th>Cameras</th>
+                    <th>Battery</th>
+                    <th>OS</th>
+                    <th>Other Features</th>
+                    <th>Advantages</th>
+                    <th>Disadvantages</th>
+                    <th>Price (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Galaxy M05 64GB</td>
+                    <td>6.7" HD+ LCD, 60Hz</td>
+                    <td>Helio G85</td>
+                    <td>4GB / 64GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+2MP<br>Front: 8MP</td>
+                    <td>5000mAh, 25W</td>
+                    <td>Android 14, One UI 6</td>
+                    <td>Dual SIM, 3.5mm jack, Face Unlock</td>
+                    <td>Good battery, affordable, expandable storage</td>
+                    <td>Basic RAM, LCD, no 5G</td>
+                    <td>6,499</td>
+                </tr>
+                <tr>
+                    <td>Galaxy F06 5G</td>
+                    <td>6.7" HD+ LCD, 90Hz</td>
+                    <td>Dimensity 6300</td>
+                    <td>4/6GB / 128GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+2MP<br>Front: 8MP</td>
+                    <td>5000mAh, 25W</td>
+                    <td>Android 15, One UI 7</td>
+                    <td>5G, Side FP, 4 OS upgrades</td>
+                    <td>5G, big display, long updates</td>
+                    <td>LCD, basic gaming</td>
+                    <td>8,800</td>
+                </tr>
+                <tr>
+                    <td>Galaxy M06 5G</td>
+                    <td>6.7" HD+ LCD, 90Hz</td>
+                    <td>Dimensity 6300</td>
+                    <td>4/6GB / 64/128GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+2MP<br>Front: 8MP</td>
+                    <td>5000mAh, 25W</td>
+                    <td>Android 15, One UI 7</td>
+                    <td>5G, Side FP, 4 OS upgrades</td>
+                    <td>5G, large screen, good battery</td>
+                    <td>LCD, average performance</td>
+                    <td>7,999</td>
+                </tr>
+                <tr>
+                    <td>Galaxy A06 5G</td>
+                    <td>6.7" HD+ LCD, 90Hz</td>
+                    <td>Dimensity 6300</td>
+                    <td>4/6GB / 64/128GB, microSD up to 1.5TB</td>
+                    <td>Rear: 50MP+2MP<br>Front: 8MP</td>
+                    <td>5000mAh, 25W</td>
+                    <td>Android 15, One UI 7</td>
+                    <td>IP54, Side FP, 5G</td>
+                    <td>5G, IP54, big battery</td>
+                    <td>LCD, basic camera</td>
+                    <td>9,999</td>
+                </tr>
+                <tr>
+                    <td>Galaxy A14 4G</td>
+                    <td>6.6" FHD+ LCD, 60Hz</td>
+                    <td>Exynos 850</td>
+                    <td>4/6GB / 64/128GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+5MP+2MP<br>Front: 13MP</td>
+                    <td>5000mAh, 15W</td>
+                    <td>Android 13, One UI 5</td>
+                    <td>Side FP, 3.5mm jack</td>
+                    <td>Reliable, decent camera</td>
+                    <td>No 5G, older chipset</td>
+                    <td>8,990</td>
+                </tr>
+                <tr>
+                    <td>Galaxy F04</td>
+                    <td>6.5" HD+ LCD, 60Hz</td>
+                    <td>Helio P35</td>
+                    <td>4GB / 64GB, microSD up to 1TB</td>
+                    <td>Rear: 13MP+2MP<br>Front: 5MP</td>
+                    <td>5000mAh</td>
+                    <td>Android 12</td>
+                    <td>Face Unlock, Dual SIM</td>
+                    <td>Affordable, big battery</td>
+                    <td>No FP, basic camera</td>
+                    <td>7,499</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- ₹10,000–₹15,000 -->
+    <div id="tab2" class="tab-content">
+        <table id="table2" class="display">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Display</th>
+                    <th>Processor</th>
+                    <th>RAM / Storage</th>
+                    <th>Cameras</th>
+                    <th>Battery</th>
+                    <th>OS</th>
+                    <th>Other Features</th>
+                    <th>Advantages</th>
+                    <th>Disadvantages</th>
+                    <th>Price (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Galaxy F15 5G</td>
+                    <td>6.5" FHD+ sAMOLED, 90Hz</td>
+                    <td>Dimensity 6100+</td>
+                    <td>4/6/8GB / 128GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+5MP+2MP<br>Front: 13MP</td>
+                    <td>6000mAh, 25W</td>
+                    <td>Android 14, One UI 6</td>
+                    <td>Gorilla Glass 5, 5G, Side FP</td>
+                    <td>AMOLED, 5G, big battery</td>
+                    <td>Average camera</td>
+                    <td>11,000</td>
+                </tr>
+                <tr>
+                    <td>Galaxy M15 5G Prime</td>
+                    <td>6.5" FHD+ sAMOLED, 90Hz</td>
+                    <td>Dimensity 6100+</td>
+                    <td>4/6/8GB / 128GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+5MP+2MP<br>Front: 13MP</td>
+                    <td>6000mAh, 25W</td>
+                    <td>Android 14, One UI 6</td>
+                    <td>5G, Side FP, 4 OS upgrades</td>
+                    <td>AMOLED, 5G, long battery</td>
+                    <td>No stereo speakers</td>
+                    <td>11,999</td>
+                </tr>
+                <tr>
+                    <td>Galaxy A16 5G</td>
+                    <td>6.7" FHD+ sAMOLED, 90Hz</td>
+                    <td>Dimensity 6300</td>
+                    <td>6/8GB / 128/256GB, microSD up to 1.5TB</td>
+                    <td>Rear: 50MP+5MP+2MP<br>Front: 13MP</td>
+                    <td>5000mAh, 25W</td>
+                    <td>Android 14, One UI 6</td>
+                    <td>IP54, 5G, Side FP</td>
+                    <td>AMOLED, 5G, big battery</td>
+                    <td>No 4K video, no 3.5mm jack</td>
+                    <td>13,939</td>
+                </tr>
+                <tr>
+                    <td>Galaxy A24</td>
+                    <td>6.5" FHD+ sAMOLED, 90Hz</td>
+                    <td>Helio G99</td>
+                    <td>6/8GB / 128GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+5MP+2MP<br>Front: 13MP</td>
+                    <td>5000mAh, 25W</td>
+                    <td>Android 13, One UI 5</td>
+                    <td>Side FP, 4G</td>
+                    <td>AMOLED, smooth display</td>
+                    <td>No 5G</td>
+                    <td>15,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- ₹15,000–₹20,000 -->
+    <div id="tab3" class="tab-content">
+        <table id="table3" class="display">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Display</th>
+                    <th>Processor</th>
+                    <th>RAM / Storage</th>
+                    <th>Cameras</th>
+                    <th>Battery</th>
+                    <th>OS</th>
+                    <th>Other Features</th>
+                    <th>Advantages</th>
+                    <th>Disadvantages</th>
+                    <th>Price (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Galaxy M33 5G</td>
+                    <td>6.6" FHD+ LCD, 90Hz</td>
+                    <td>Exynos 1280</td>
+                    <td>6/8GB / 128GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+2MP+2MP+2MP<br>Front: 8MP</td>
+                    <td>6000mAh, 25W</td>
+                    <td>Android 12, One UI 4</td>
+                    <td>5G, Side FP</td>
+                    <td>Big battery, 5G, multitasking</td>
+                    <td>LCD, not AMOLED</td>
+                    <td>16,000</td>
+                </tr>
+                <tr>
+                    <td>Galaxy F34 5G</td>
+                    <td>6.5" FHD+ sAMOLED, 120Hz</td>
+                    <td>Exynos 1280</td>
+                    <td>6/8GB / 128GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+8MP+2MP<br>Front: 13MP</td>
+                    <td>6000mAh, 25W</td>
+                    <td>Android 13, One UI 5</td>
+                    <td>5G, Side FP</td>
+                    <td>AMOLED, 120Hz, big battery</td>
+                    <td>Not for heavy gaming</td>
+                    <td>16,800</td>
+                </tr>
+                <tr>
+                    <td>Galaxy M34 5G</td>
+                    <td>6.5" FHD+ sAMOLED, 120Hz</td>
+                    <td>Exynos 1280</td>
+                    <td>6/8GB / 128/256GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+8MP+2MP<br>Front: 13MP</td>
+                    <td>6000mAh, 25W</td>
+                    <td>Android 13, One UI 5</td>
+                    <td>5G, Side FP</td>
+                    <td>AMOLED, 120Hz, long battery</td>
+                    <td>Not for heavy gaming</td>
+                    <td>18,000–19,000</td>
+                </tr>
+                <tr>
+                    <td>Galaxy A33 5G</td>
+                    <td>6.4" FHD+ sAMOLED, 90Hz</td>
+                    <td>Exynos 1280</td>
+                    <td>6/8GB / 128GB, microSD up to 1TB</td>
+                    <td>Rear: 48MP+8MP+5MP+2MP<br>Front: 13MP</td>
+                    <td>5000mAh, 25W</td>
+                    <td>Android 12, One UI 4</td>
+                    <td>IP67, 5G, Under Display FP</td>
+                    <td>AMOLED, water resistance</td>
+                    <td>Slightly older model</td>
+                    <td>22,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- ₹20,000–₹25,000 -->
+    <div id="tab4" class="tab-content">
+        <table id="table4" class="display">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Display</th>
+                    <th>Processor</th>
+                    <th>RAM / Storage</th>
+                    <th>Cameras</th>
+                    <th>Battery</th>
+                    <th>OS</th>
+                    <th>Other Features</th>
+                    <th>Advantages</th>
+                    <th>Disadvantages</th>
+                    <th>Price (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Galaxy A35 5G</td>
+                    <td>6.6" FHD+ sAMOLED, 120Hz</td>
+                    <td>Exynos 1380</td>
+                    <td>8GB / 256GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+8MP+5MP<br>Front: 13MP</td>
+                    <td>5000mAh, 25W</td>
+                    <td>Android 14, One UI 6</td>
+                    <td>IP67, Gorilla Glass Victus+, 5G</td>
+                    <td>AMOLED, water resistance, long updates</td>
+                    <td>No wireless charging</td>
+                    <td>25,999</td>
+                </tr>
+                <tr>
+                    <td>Galaxy M35 5G</td>
+                    <td>6.6" FHD+ sAMOLED, 120Hz</td>
+                    <td>Exynos 1380</td>
+                    <td>8GB / 256GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+8MP+2MP<br>Front: 13MP</td>
+                    <td>6000mAh, 25W</td>
+                    <td>Android 14, One UI 6</td>
+                    <td>5G, Side FP</td>
+                    <td>AMOLED, big battery, smooth UI</td>
+                    <td>Plastic build</td>
+                    <td>24,500</td>
+                </tr>
+                <tr>
+                    <td>Galaxy F55 5G</td>
+                    <td>6.7" FHD+ sAMOLED, 120Hz</td>
+                    <td>Snapdragon 7 Gen 1</td>
+                    <td>8GB / 256GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+8MP+2MP<br>Front: 16MP</td>
+                    <td>5000mAh, 25W</td>
+                    <td>Android 14, One UI 6</td>
+                    <td>5G, Side FP</td>
+                    <td>Fast processor, AMOLED, 5G</td>
+                    <td>No headphone jack</td>
+                    <td>20,400</td>
+                </tr>
+                <tr>
+                    <td>Galaxy A34 5G</td>
+                    <td>6.6" FHD+ sAMOLED, 120Hz</td>
+                    <td>Dimensity 1080</td>
+                    <td>8GB / 128/256GB, microSD up to 1TB</td>
+                    <td>Rear: 48MP+8MP+5MP<br>Front: 13MP</td>
+                    <td>5000mAh, 25W</td>
+                    <td>Android 13, One UI 5</td>
+                    <td>IP67, 5G, Under Display FP</td>
+                    <td>AMOLED, water resistance, 5G</td>
+                    <td>Camera could be better</td>
+                    <td>21,000–22,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- ₹25,000–₹30,000 -->
+    <div id="tab5" class="tab-content">
+        <table id="table5" class="display">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Display</th>
+                    <th>Processor</th>
+                    <th>RAM / Storage</th>
+                    <th>Cameras</th>
+                    <th>Battery</th>
+                    <th>OS</th>
+                    <th>Other Features</th>
+                    <th>Advantages</th>
+                    <th>Disadvantages</th>
+                    <th>Price (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Galaxy M56 5G</td>
+                    <td>6.7" FHD+ sAMOLED, 120Hz</td>
+                    <td>Exynos 1480</td>
+                    <td>8GB / 256GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+8MP+2MP<br>Front: 13MP</td>
+                    <td>5000mAh, 25W</td>
+                    <td>Android 14, One UI 6</td>
+                    <td>5G, Side FP</td>
+                    <td>AMOLED, big battery, smooth UI</td>
+                    <td>Plastic build</td>
+                    <td>27,999</td>
+                </tr>
+                <tr>
+                    <td>Galaxy F56 5G</td>
+                    <td>6.7" FHD+ sAMOLED, 120Hz</td>
+                    <td>Exynos 1480</td>
+                    <td>8GB / 256GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+8MP+2MP<br>Front: 13MP</td>
+                    <td>5000mAh, 45W</td>
+                    <td>Android 14, One UI 6</td>
+                    <td>5G, Side FP</td>
+                    <td>AMOLED, fast charging, 5G</td>
+                    <td>Plastic build</td>
+                    <td>27,999</td>
+                </tr>
+                <tr>
+                    <td>Galaxy A54 5G</td>
+                    <td>6.4" FHD+ sAMOLED, 120Hz</td>
+                    <td>Exynos 1380</td>
+                    <td>8GB / 256GB, microSD up to 1TB</td>
+                    <td>Rear: 50MP+12MP+5MP<br>Front: 32MP</td>
+                    <td>5000mAh, 25W</td>
+                    <td>Android 14, One UI 6</td>
+                    <td>IP67, 5G, Under Display FP</td>
+                    <td>AMOLED, water resistance, long updates</td>
+                    <td>Camera low light could be better</td>
+                    <td>25,000</td>
+                </tr>
+                <tr>
+                    <td>Galaxy S21 FE (Refurb)</td>
+                    <td>6.4" FHD+ sAMOLED, 120Hz</td>
+                    <td>Exynos 2100 / Snapdragon 888</td>
+                    <td>8GB / 128/256GB, no microSD</td>
+                    <td>Rear: 12MP+12MP+8MP<br>Front: 32MP</td>
+                    <td>4500mAh, 25W</td>
+                    <td>Android 13, One UI 5</td>
+                    <td>IP68, Wireless Charging, 5G</td>
+                    <td>Flagship experience, great camera</td>
+                    <td>Refurbished, older model</td>
+                    <td>~28,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+            this.classList.add('active');
+            document.getElementById(this.dataset.tab).classList.add('active');
+        });
+    });
+    $(document).ready(function() {
+        for (let i = 1; i <= 5; i++) {
+            $('#table' + i).DataTable({
+                paging: false,
+                searching: true,
+                info: false,
+                order: []
+            });
+        }
+    });
+</script>
+</body>
+</html>
